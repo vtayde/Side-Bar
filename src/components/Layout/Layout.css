@@ -1,0 +1,148 @@
+/* Primary Styles */
+a {
+  text-decoration: none;
+  color: inherit;
+} 
+
+/* Top Nav Bar */
+
+.TopNavBar{
+  margin-left: 4em;
+  position: fixed;
+  z-index: 1;
+  width:calc(100% - 4em);
+  height: 4rem;
+  background-color: white;
+  right: 0;
+  transition: all .3s ease-in;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+}
+
+.Title {
+  color: black;
+  font-size: 1.3rem;
+  padding-left: 1rem;
+}
+/* Sidebar */
+.sidebar__trigger {
+  position: fixed;
+  
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4em;
+  background: white;
+  color: black;
+}
+
+.sidebar__trigger > i {
+  display: inline-block;
+  margin: 1.5em 0 0 1.5em;
+  color: rgb(153, 152, 152);
+}
+
+.sidebar__nav {
+  box-shadow: 2px 0px 4px 0 rgba(0,0,0,0.10);
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: -15em;
+  overflow: hidden;
+  transition: all .3s ease-in;
+  width: 15em;
+  height: 100%;
+  background: white;
+  color: rgb(153, 152, 152);
+}
+
+.sidebar__nav:hover,
+.sidebar__nav:focus,
+.sidebar__trigger:focus + .sidebar__nav,
+.sidebar__trigger:hover + .sidebar__nav {
+  left: 0;
+}
+
+.sidebar__nav ul {
+  position: absolute;
+  top: 4em;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 15em;
+}
+
+.sidebar__nav ul li {
+  width: 100%;
+}
+
+.sidebar__nav_link {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 4em;
+  
+}
+
+.sidebar__nav_link em {
+  position: absolute;
+  top: 50%;
+  left: 4em;
+  transform: translateY(-50%);
+}
+
+.sidebar__nav_link:hover {
+  color: black;
+  background: rgba(45,105,235, 0.15);
+  
+}
+
+.sidebar__nav_link > i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 4em;
+  height: 4em;
+  
+}
+
+.sidebar__nav-link > i::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Mobile First */
+ .sidebar__trigger:hover ~ .TopNavBar,
+ .sidebar__nav:hover ~ .TopNavBar,
+ .sidebar__trigger:focus ~ .TopNavBar,
+ .sidebar__nav:focus ~ .TopNavBar {
+    width: calc(100% - 10em);
+   }
+  .layout__content {
+     margin-left: 4em;
+  }
+  
+  /* Sidebar */
+  .sidebar__trigger {
+     width: 4em;
+  }
+  
+  .sidebar__nav {
+     width: 4em;
+     left: 0;
+  }
+  
+  .sidebar__nav:hover,
+  .sidebar__nav:focus,
+  .sidebar__trigger:hover + .sidebar__nav,
+  .sidebar__trigger:focus + .sidebar__nav {
+     width: 10em;
+  }
+.sidebar__nav_link > i {
+  margin: 1.5em 0 0 1.5em;
+}
+
+
