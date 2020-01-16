@@ -1,28 +1,38 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom'
-import './App.css';
+import { connect } from 'react-redux';
+import { Route, withRouter, Switch, Redirect } from 'react-router-dom';
 import Login from './components/Login'
-import Router from './Router';
 import Layout from './components/Layout/Layout';
+import classes from './App.css'
+import HomePage from './pages/homePage'
+import cartPage from './pages/formPage'
 
 class App extends Component {
   render() {
-    if(localStorage.getItem('token')){
-      return (
-        <div className='layout'>
+    let routes = <div className={classes.LoginPage}>
+                    <Route exact path='/login' component={Login}/>
+                  </div>
+    if(this.props.token || localStorage.getItem('token')){
+      routes = 
+        <div className={classes.layout}>
           <Layout></Layout>
-          <main className='layout__content'>
-              <Router></Router>
+          <main className={classes.layout__content}>
+          <Switch>
+            <Route exact path='/home' component={HomePage}/>
+            <Route exact path='/cart' component={cartPage}/>
+        </Switch>
             </main>
         </div>
-      );
-      }
-    else {
-      return <div className='LoginPage'>
-        <Route exact path='/' component={Login}/>
-      </div>
     }
+    return (
+     routes
+    );
   }
 }
+  const mapStateToProps = (state) => {
+    return {
+      token: state.token
+    }
+  }
 
-export default App;
+export default withRouter(connect(null, mapStateToProps)(App));

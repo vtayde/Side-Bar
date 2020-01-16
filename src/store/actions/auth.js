@@ -11,7 +11,7 @@ export const auth = (payload) => {
         window.localStorage.setItem('status', authStatus.status)
         window.localStorage.setItem('userName', authStatus.userName)
         window.localStorage.setItem('name', authStatus.name)
-        dispatch({type: 'LOGIN',email: payload.emailID,password: payload.password})
+        dispatch({type: 'LOGIN',email: payload.emailID,password: payload.password, token:authStatus.token})
       })
         .catch(error => {
           console.log('Error')

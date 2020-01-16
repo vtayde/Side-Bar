@@ -7,10 +7,10 @@ a {
 /* Top Nav Bar */
 
 .TopNavBar{
-  margin-left: 4em;
+  margin-left: 3rem;
   position: fixed;
   z-index: 1;
-  width:calc(100% - 4em);
+  width:calc(100% - 3rem);
   height: 4rem;
   background-color: white;
   right: 0;
@@ -50,7 +50,7 @@ a {
   left: -15em;
   overflow: hidden;
   transition: all .3s ease-in;
-  width: 15em;
+  width: 15rem;
   height: 100%;
   background: white;
   color: rgb(153, 152, 152);
@@ -69,7 +69,7 @@ a {
   left: 0;
   margin: 0;
   padding: 0;
-  width: 15em;
+  width: 15rem;
 }
 
 .sidebar__nav ul li {
@@ -87,7 +87,7 @@ a {
 .sidebar__nav_link em {
   position: absolute;
   top: 50%;
-  left: 4em;
+  left: 3rem;
   transform: translateY(-50%);
 }
 
@@ -102,8 +102,8 @@ a {
   top: 0;
   left: 0;
   display: inline-block;
-  width: 4em;
-  height: 4em;
+  width: 3rem;
+  height: 3rem;
   
 }
 
@@ -122,16 +122,16 @@ a {
     width: calc(100% - 10em);
    }
   .layout__content {
-     margin-left: 4em;
+     margin-left: 3em;
   }
   
   /* Sidebar */
   .sidebar__trigger {
-     width: 4em;
+     width: 3em;
   }
   
   .sidebar__nav {
-     width: 4em;
+     width: 3em;
      left: 0;
   }
   

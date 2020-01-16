@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {Component} from 'react';
+import { connect } from 'react-redux';
 import Auxiliary from '../../hoc/Auxiliary';
 import classes from './Layout.css';
 import { NavLink } from 'react-router-dom';
+import {Row, Col} from 'react-bootstrap';
 
-const layout = (props) => {
+class layout extends Component {
+
+   render () {
   return (
   <Auxiliary>
   
@@ -32,10 +36,11 @@ const layout = (props) => {
      </ul>
   </div>
   <div className={classes.TopNavBar}>
-   <p className={classes.Title}>PromoSmart</p>
-</div>
+      <p className={classes.Title}>PromoSmart</p>
+   </div>
 </div>
   </Auxiliary>
   );
+   }
 };
 export default layout;

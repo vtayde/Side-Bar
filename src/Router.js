@@ -5,7 +5,7 @@ import cartPage from './pages/formPage'
 
 const Router = () => (
     <Switch>
-        <Route exact path='/' component={HomePage}/>
+        <Route exact path='/home' component={HomePage}/>
         <Route exact path='/cart' component={cartPage}/>
     </Switch>
 );
